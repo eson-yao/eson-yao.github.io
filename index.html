@@ -3,78 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="eson-yao 的个人作品集">
-  <title>eson-yao · 作品集</title>
+  <meta name="description" content="姚一心，游戏关卡策划。UE5 灰盒 Demo《雪隐》关卡设计，以及风景园林空间与动线实践。">
+  <title>姚一心 · 游戏关卡策划</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page">
     <header class="hero">
-      <p class="kicker">Portfolio</p>
-      <h1>eson-yao</h1>
+      <p class="kicker">Level Design</p>
+      <h1>姚一心</h1>
+      <p class="role">游戏关卡策划 · 上海 · 随时到岗</p>
       <p class="lead">
-        你好，我是 eson-yao。这里展示我正在做的网页与小项目。
-        把下面卡片里的标题、说明和链接换成你自己的作品即可。
+        风景园林硕士。我把空间规划、人流引导和场景叙事用到关卡里，目前用 Unreal Engine 5 做灰盒关卡。
+        代表作是第三人称 ARPG 线性箱庭 Demo《雪隐》。
       </p>
       <div class="actions">
-        <a class="btn primary" href="https://github.com/eson-yao" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="#projects">查看作品</a>
+        <a class="btn primary" href="#xueyin">查看《雪隐》</a>
+        <a class="btn" href="files/resume.pdf" target="_blank" rel="noopener">下载简历</a>
+        <a class="btn" href="mailto:1485858833@qq.com">发邮件</a>
       </div>
     </header>
 
-    <main id="projects">
-      <h2 class="section-title">精选作品</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>作品集网站</h3>
-          <p>用 HTML / CSS 搭建的个人主页，部署在 GitHub Pages。</p>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>GitHub Pages</li>
-          </ul>
-          <p class="links">
-            <a href="https://eson-yao.github.io" target="_blank" rel="noopener">在线预览</a>
-            <a href="https://github.com/eson-yao/eson-yao.github.io" target="_blank" rel="noopener">源码</a>
-          </p>
-        </article>
+    <main>
+      <section id="xueyin" class="feature">
+        <p class="eyebrow">代表关卡</p>
+        <h2>《雪隐》</h2>
+        <ul class="tags">
+          <li>Unreal Engine 5</li>
+          <li>灰盒</li>
+          <li>ARPG</li>
+          <li>线性箱庭</li>
+          <li>第三人称</li>
+          <li>约 20 分钟</li>
+          <li>关卡设计</li>
+        </ul>
+        <p>
+          这是一关以雪为母题的潜入与清剿。积雪会留下脚印，隐身敌人因此变得可读。
+          飞雪技能可以扬起雪雾让敌人显形，把积雪方块凝成可踩的台阶，并短时格挡飞箭。
+          主路径始终清楚，支线奖励可以被提前看见。
+        </p>
+        <ul class="points">
+          <li>节奏分三段：后山建筑群建立规则，魔教主体建筑加压并限制技能，主峰要求玩家自己制造掩体，再打终局 Boss。</li>
+          <li>空间从后山树林、生活区、祭祀台，经过洞天、书画房、丹塔和地牢，直到正殿与主峰。</li>
+          <li>雪地关卡参考《艾尔登法环》《黑神话：悟空》和《双人成行》；飞雪墙的短时格挡参考风墙一类的弹道防护。</li>
+        </ul>
+        <p class="links">
+          <a href="files/xueyin-level-design.pdf" target="_blank" rel="noopener">阅读完整关卡设计介绍（PDF）</a>
+        </p>
+      </section>
 
-        <article class="card">
-          <h3>第二个项目</h3>
-          <p>写一两句话：它解决什么问题，你负责哪一部分。</p>
-          <ul class="tags">
-            <li>技术栈</li>
-            <li>待补充</li>
-          </ul>
-          <p class="links">
-            <a href="https://github.com/eson-yao" target="_blank" rel="noopener">查看代码</a>
-          </p>
-        </article>
+      <section id="space">
+        <h2 class="section-title">空间设计基础</h2>
+        <p class="section-lead">
+          做关卡之前，我在真实场地里处理路径、高差和叙事空间。这些项目练的是同一件事：让人在移动中感到节奏和情绪变化。
+        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>田寺村关君蔚纪念园</h3>
+            <p class="meta">乡村纪念园 · 0.35 公顷 · 项目负责人</p>
+            <p>独立完成方案到施工图。用路径和节点安排叙事，让访客一边走、一边感到空间情绪在变。</p>
+          </article>
+          <article class="card">
+            <h3>湖州腊山公园</h3>
+            <p class="meta">城市综合公园 · 8.3 公顷 · 项目负责人</p>
+            <p>山地公园。用高差组织垂直方向的探索，并规划多条主题游线，控制节点之间的游览节奏。</p>
+          </article>
+          <article class="card">
+            <h3>凤凰湾滨河绿带</h3>
+            <p class="meta">滨水商业景观 · 13.1 公顷 · 项目负责人</p>
+            <p>把商业、广场和自然接在同一条滨水动线上，用空间层次引导人流聚集和分散。</p>
+          </article>
+        </div>
+        <p class="links">
+          <a href="files/landscape-portfolio.pdf" target="_blank" rel="noopener">查看景观作品集（PDF）</a>
+        </p>
+      </section>
 
-        <article class="card">
-          <h3>第三个项目</h3>
-          <p>可以是课程作业、小工具或练习项目，写清楚你做了什么。</p>
-          <ul class="tags">
-            <li>技术栈</li>
-            <li>待补充</li>
-          </ul>
-          <p class="links">
-            <a href="https://github.com/eson-yao" target="_blank" rel="noopener">查看代码</a>
-          </p>
-        </article>
-      </div>
+      <section class="about" id="about">
+        <h2 class="section-title">关于我</h2>
+        <p>
+          北京林业大学风景园林硕士（2023–2026），沈阳建筑大学风景园林学士（2017–2021）。
+          硕士阶段学习空间规划、古典园林和项目管理，2023 年获学业一等奖学金。
+          曾在上海市政工程设计研究总院、北京博雅方略、清华同衡规划设计研究院做景观设计，负责场地分析、动线、模型和多方协调。
+        </p>
+        <p>
+          我用 Unreal Engine 搭建关卡白盒，也能用 Rhino、SketchUp 建模，用 Lumion、D5 和 Photoshop 表达空间。
+          长期游玩动作、开放世界和射击游戏，习惯从动线、战斗空间和节奏拆关卡。
+        </p>
+      </section>
     </main>
 
-    <section class="about">
-      <h2 class="section-title">关于我</h2>
-      <p>
-        在这里介绍你的方向、正在学的技术，以及你希望别人记住什么。
-        一两段话就够。
-      </p>
-    </section>
-
     <footer>
-      <p>© 2026 eson-yao · <a href="https://github.com/eson-yao">github.com/eson-yao</a></p>
+      <p>姚一心 · 游戏关卡策划</p>
+      <p>
+        <a href="tel:+8618752682988">187 5268 2988</a>
+        ·
+        <a href="mailto:1485858833@qq.com">1485858833@qq.com</a>
+        · 上海
+        ·
+        <a href="files/resume.pdf" target="_blank" rel="noopener">简历 PDF</a>
+      </p>
+      <p class="fine">© 2026 姚一心</p>
     </footer>
   </div>
 </body>
