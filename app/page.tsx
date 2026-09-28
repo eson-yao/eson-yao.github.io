@@ -11,6 +11,9 @@ const maxHours = Math.max(
   ...site.about.games.groups.flatMap((group) => group.items.map((game) => game.hours)),
 );
 
+// 平方根尺度：时长跨度从 50h 到 4500h，线性比例会把百小时级别压成一条细线
+const barWidth = (hours: number) => `${Math.max(4, Math.sqrt(hours / maxHours) * 100)}%`;
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
@@ -234,7 +237,9 @@ export default function Home() {
                       <p className="font-mono text-[11px] tracking-[0.14em] text-accent">{t.period}</p>
                       <h3 className="mt-2 text-lg font-semibold">{t.org}</h3>
                       <p className="text-sm text-muted">{t.role}</p>
-                      {t.text ? <p className="mt-2 text-sm leading-7 text-soft">{t.text}</p> : null}
+                      {t.text ? (
+                        <p className="mt-2 indent-[2em] text-justify text-sm leading-7 text-soft">{t.text}</p>
+                      ) : null}
                     </li>
                   </Reveal>
                 ))}
@@ -289,7 +294,7 @@ export default function Home() {
                               <div className="h-1 w-full bg-line">
                                 <div
                                   className="bar-fill h-full bg-accent"
-                                  style={{ width: `${Math.max(3, (game.hours / maxHours) * 100)}%` }}
+                                  style={{ width: barWidth(game.hours) }}
                                 />
                               </div>
                             </li>

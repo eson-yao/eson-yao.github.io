@@ -172,8 +172,9 @@ export const site = {
       },
     ],
     skills: [
-      { group: "空间与关卡设计", items: ["空间布局", "动线规划", "场景氛围营造", "UE5 关卡白盒搭建与布局"] },
-      { group: "建模渲染", items: ["Rhino", "SketchUp", "AutoCAD", "Lumion", "D5", "Photoshop"] },
+      { group: "空间与关卡设计", items: ["空间布局", "动线规划", "场景氛围营造", "UE5 关卡白盒搭建"] },
+      { group: "建模", items: ["Rhino", "SketchUp", "AutoCAD"] },
+      { group: "渲染绘图", items: ["Lumion", "D5", "Photoshop"] },
       { group: "协同办公", items: ["Office", "飞书", "Cursor"] },
     ],
     games: {
