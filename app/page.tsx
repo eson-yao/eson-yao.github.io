@@ -59,10 +59,12 @@ export default function Home() {
                     <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
                   </a>
                   <a
-                    href={`mailto:${site.email}`}
+                    href={site.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center gap-3 border border-line-strong px-5 py-3 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
                   >
-                    通过邮箱联系
+                    查看完整简历
                     <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                   </a>
                 </div>

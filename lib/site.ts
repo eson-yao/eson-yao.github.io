@@ -21,7 +21,7 @@ export const site = {
   scope: "关卡设计 · 制作跟进",
   status: "上海 · 随时到岗",
   email: "1485858833@qq.com",
-  phone: "187 5268 2988",
+  phone: "+8618752682988",
   phoneHref: "tel:+8618752682988",
   location: "上海",
   github: "https://github.com/eson-yao",
@@ -178,7 +178,7 @@ export const site = {
       { group: "协同办公", items: ["Office", "飞书", "Cursor"] },
     ],
     games: {
-      note: "全品类 15,000+ 小时。有时长的按简历标注；其余为版本毕业或深度体验。",
+      note: "全品类 15,000+ 小时。未标注时长的游戏进度为版本毕业或深度体验。",
       groups: [
         {
           name: "二次元手游",
@@ -264,14 +264,10 @@ export const site = {
   },
 
   marquee: [
-    "LEVEL DESIGN",
-    "UNREAL ENGINE 5",
-    "白模搭建",
-    "场景与动线",
-    "战斗节奏",
-    "关卡事件",
-    "环境叙事",
+    "关卡设计",
     "制作跟进",
-    "风景园林硕士",
+    "空间架构",
+    "环境叙事",
+    "玩家体验",
   ],
 };
