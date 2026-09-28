@@ -275,7 +275,7 @@ export default function Home() {
                 <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
                   {site.about.games.groups.map((group) => (
                     <div key={group.name}>
-                      <p className="mb-3 font-mono text-[10px] tracking-[0.16em] text-accent">{group.name}</p>
+                      <p className="mb-3 font-mono text-sm font-semibold tracking-[0.12em] text-accent">{group.name}</p>
                       {group.items.length > 0 ? (
                         <ul className="space-y-3">
                           {group.items.map((game) => (
@@ -322,40 +322,63 @@ export default function Home() {
               <p className="mb-4 font-mono text-[11px] tracking-[0.18em] text-muted">
                 <span className="text-accent">04</span> / CONTACT
               </p>
-              <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">欢迎直接联系。</h2>
-              <p className="mt-5 max-w-xl indent-[2em] text-justify leading-8 text-soft">
-                正在寻找关卡设计岗位：搭白模、跟地编和美术把关卡做到落地，再测试和调整。{site.status}。想聊《雪隐》的任何一段设计，随时写信。
-              </p>
+              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">联系方式与简历</h2>
+              <p className="mt-3 text-sm text-soft sm:text-base">欢迎通过以下方式与我联系！</p>
             </Reveal>
             <Reveal delay={120}>
-              <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-3">
-                <a
-                  href={`mailto:${site.email}`}
-                  className="group bg-background p-6 transition-colors duration-300 hover:bg-card"
-                >
-                  <p className="font-mono text-[10px] tracking-[0.16em] text-muted">EMAIL</p>
-                  <p className="mt-3 break-all text-lg font-medium transition-colors group-hover:text-accent">
-                    {site.email}
-                  </p>
-                  <span className="mt-4 inline-block text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent">↗</span>
-                </a>
+              <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 <a
                   href={site.phoneHref}
-                  className="group bg-background p-6 transition-colors duration-300 hover:bg-card"
+                  className="group flex items-center gap-3 border border-line bg-card px-5 py-4 transition-colors duration-300 hover:border-accent"
                 >
-                  <p className="font-mono text-[10px] tracking-[0.16em] text-muted">PHONE</p>
-                  <p className="mt-3 text-lg font-medium transition-colors group-hover:text-accent">{site.phone}</p>
-                  <span className="mt-4 inline-block text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent">↗</span>
+                  <span className="grid h-8 w-8 shrink-0 place-items-center bg-accent/15 text-accent">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" />
+                    </svg>
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-mono text-[10px] tracking-[0.16em] text-muted">电话</span>
+                    <span className="block truncate text-sm font-medium transition-colors group-hover:text-accent">
+                      {site.phone}
+                    </span>
+                  </span>
+                </a>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="group flex items-center gap-3 border border-line bg-card px-5 py-4 transition-colors duration-300 hover:border-accent"
+                >
+                  <span className="grid h-8 w-8 shrink-0 place-items-center bg-accent/15 text-accent">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3 7 9 6 9-6" />
+                    </svg>
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-mono text-[10px] tracking-[0.16em] text-muted">邮箱</span>
+                    <span className="block truncate text-sm font-medium transition-colors group-hover:text-accent">
+                      {site.email}
+                    </span>
+                  </span>
                 </a>
                 <a
                   href={site.resume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-background p-6 transition-colors duration-300 hover:bg-card"
+                  className="group flex items-center gap-3 border border-line bg-card px-5 py-4 transition-colors duration-300 hover:border-accent"
                 >
-                  <p className="font-mono text-[10px] tracking-[0.16em] text-muted">RESUME</p>
-                  <p className="mt-3 text-lg font-medium transition-colors group-hover:text-accent">下载简历 PDF</p>
-                  <span className="mt-4 inline-block text-muted transition-transform duration-300 group-hover:translate-y-1 group-hover:text-accent">↓</span>
+                  <span className="grid h-8 w-8 shrink-0 place-items-center bg-accent/15 text-accent">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                      <path d="M14 3v6h6" />
+                      <path d="M12 12v6m-3-3 3 3 3-3" />
+                    </svg>
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-mono text-[10px] tracking-[0.16em] text-muted">简历</span>
+                    <span className="block truncate text-sm font-medium transition-colors group-hover:text-accent">
+                      下载简历 PDF
+                    </span>
+                  </span>
                 </a>
               </div>
             </Reveal>
