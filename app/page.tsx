@@ -104,25 +104,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 方向 */}
-        <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8">
-          <div className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {site.focus.map((f, i) => (
-              <Reveal key={f.code} delay={i * 80} className="bg-background">
-                <div className="group h-full p-6 transition-colors duration-300 hover:bg-card">
-                  <p className="mb-6 flex items-center justify-between font-mono text-[11px] tracking-[0.16em] text-muted">
-                    <span className="text-accent">{f.code}</span>
-                    <span>{f.en}</span>
-                  </p>
-                  <h3 className="text-xl font-semibold">{f.title}</h3>
-                  <p className="mt-3 indent-[2em] text-justify text-sm leading-7 text-soft">{f.text}</p>
-                  <span className="mt-6 block h-px w-8 bg-line-strong transition-all duration-500 group-hover:w-full group-hover:bg-accent" />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         {/* 02 作品 / 雪隐 */}
         <section id="xueyin" className="relative scroll-mt-16 border-t border-line bg-card">
           <div className="pointer-events-none absolute left-0 top-0 hidden select-none font-mono sm:block text-[14rem] font-bold leading-none text-foreground/[0.03] sm:text-[20rem]">
@@ -239,8 +220,6 @@ export default function Home() {
                 code={site.about.code}
                 en={site.about.en}
                 title={site.about.title}
-                lead={site.about.lead}
-                prose
               />
             </Reveal>
 
