@@ -62,17 +62,6 @@ export default function Home() {
                   </a>
                 </div>
               </Reveal>
-              <Reveal delay={320}>
-                <dl className="mt-12 grid grid-cols-3 divide-x divide-line border-y border-line">
-                  {site.stats.map((s) => (
-                    <div key={s.label} className="px-4 py-5 first:pl-0">
-                      <dt className="font-mono text-[10px] tracking-[0.16em] text-muted">{s.note}</dt>
-                      <dd className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{s.value}</dd>
-                      <dd className="mt-1 text-xs text-soft">{s.label}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </Reveal>
             </div>
 
             <Reveal delay={200} className="lg:pl-6">
