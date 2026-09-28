@@ -96,6 +96,13 @@ export const site = {
       height: 947,
     },
     pdf: { label: "阅读完整关卡设计介绍", href: "files/xueyin-level-design.pdf", pages: "18 页 PDF" },
+    // file 留空表示视频尚未上传；填入 mp4 直链后按钮自动变为可点击
+    video: {
+      preview: "/xueyin/",
+      file: "",
+      filename: "雪隐.mp4",
+      size: "",
+    },
   },
 
   space: {

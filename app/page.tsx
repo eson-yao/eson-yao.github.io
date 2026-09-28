@@ -172,12 +172,17 @@ export default function Home() {
                   ))}
                 </ul>
                 <p className="leading-8 text-soft">{site.feature.summary}</p>
-                <div className="mt-8">
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <PdfLink
+                    href={site.feature.video.preview}
+                    label="关卡视频预览"
+                    pages={site.feature.video.file ? site.feature.video.filename : "即将上线"}
+                    primary
+                  />
                   <PdfLink
                     href={site.feature.pdf.href}
                     label={site.feature.pdf.label}
                     pages={site.feature.pdf.pages}
-                    primary
                   />
                 </div>
               </Reveal>
