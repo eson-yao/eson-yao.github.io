@@ -10,6 +10,12 @@ export type Project = {
 export const site = {
   name: "姚一心",
   initials: "YYX",
+  portrait: {
+    src: "/images/portrait.png",
+    alt: "姚一心",
+    width: 274,
+    height: 329,
+  },
   kicker: "LEVEL DESIGN PORTFOLIO",
   role: "游戏关卡策划",
   scope: "3D 白模 · 场景与战斗节奏 · 制作跟进",

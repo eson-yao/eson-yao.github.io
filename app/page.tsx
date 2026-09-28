@@ -79,8 +79,14 @@ export default function Home() {
               <HeroVisual />
               <div className="mt-10 flex items-center justify-between border border-line bg-card px-4 py-3">
                 <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 place-items-center bg-foreground font-mono text-xs font-bold text-background">
-                    {site.initials}
+                  <span className="relative block h-10 w-10 overflow-hidden">
+                    <Image
+                      src={site.portrait.src}
+                      alt=""
+                      width={site.portrait.width}
+                      height={site.portrait.height}
+                      className="h-full w-full object-cover object-[center_22%]"
+                    />
                   </span>
                   <div>
                     <p className="font-mono text-[10px] tracking-[0.16em] text-accent">CANDIDATE PROFILE / 001</p>

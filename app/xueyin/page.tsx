@@ -16,8 +16,14 @@ export default function XueyinPreview() {
       <header className="border-b border-line">
         <div className="mx-auto flex h-16 w-full max-w-4xl items-center justify-between px-5 sm:px-8">
           <Link href="/" className="group flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center bg-accent font-mono text-xs font-bold tracking-tight text-accent-ink">
-              {site.initials}
+            <span className="relative block h-9 w-9 overflow-hidden">
+              <Image
+                src={site.portrait.src}
+                alt=""
+                width={site.portrait.width}
+                height={site.portrait.height}
+                className="h-full w-full object-cover object-[center_22%]"
+              />
             </span>
             <span className="text-sm font-semibold">{site.name}</span>
           </Link>

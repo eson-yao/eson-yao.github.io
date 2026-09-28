@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { site } from "@/lib/site";
 
 export function Nav() {
@@ -48,8 +49,14 @@ export function Nav() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
         <a href="#top" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center bg-accent font-mono text-xs font-bold tracking-tight text-accent-ink transition-transform duration-300 group-hover:-rotate-6">
-            {site.initials}
+          <span className="relative block h-9 w-9 overflow-hidden">
+            <Image
+              src={site.portrait.src}
+              alt={site.portrait.alt}
+              width={site.portrait.width}
+              height={site.portrait.height}
+              className="h-full w-full object-cover object-[center_22%] transition-transform duration-300 group-hover:scale-105"
+            />
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-semibold">{site.name}</span>
