@@ -50,7 +50,7 @@ export default function Home() {
                     href="#xueyin"
                     className="group inline-flex items-center gap-3 bg-accent px-5 py-3 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-strong"
                   >
-                    查看代表关卡
+                    查看关卡Demo
                     <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
                   </a>
                   <a

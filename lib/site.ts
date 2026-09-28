@@ -38,7 +38,7 @@ export const site = {
   ],
 
   nav: [
-    { id: "top", num: "01", label: "定位", en: "INDEX" },
+    { id: "top", num: "01", label: "首页", en: "HOME" },
     { id: "xueyin", num: "02", label: "作品", en: "WORK" },
     { id: "about", num: "03", label: "经历", en: "ABOUT" },
     { id: "contact", num: "04", label: "联系", en: "CONTACT" },
