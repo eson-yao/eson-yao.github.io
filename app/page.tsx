@@ -7,7 +7,9 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PdfLink } from "@/components/PdfLink";
 
-const maxHours = Math.max(...site.about.games.items.map((g) => g.hours));
+const maxHours = Math.max(
+  ...site.about.games.groups.flatMap((group) => group.items.map((game) => game.hours)),
+);
 
 export default function Home() {
   return (
@@ -258,34 +260,52 @@ export default function Home() {
                     ))}
                   </div>
                 </Reveal>
-
-                <Reveal>
-                  <div className="border border-line bg-background p-5">
-                    <p className="mb-1 font-mono text-[10px] tracking-[0.16em] text-muted">PLAYTIME OVERVIEW</p>
-                    <p className="mb-5 text-sm text-soft">{site.about.games.note}</p>
-                    <ul className="space-y-3">
-                      {site.about.games.items.map((g) => (
-                        <li key={g.name}>
-                          <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
-                            <span>
-                              {g.name}
-                              <span className="ml-2 font-mono text-[10px] tracking-[0.08em] text-muted">{g.tag}</span>
-                            </span>
-                            <span className="font-mono text-xs text-soft">{g.hours.toLocaleString()}h</span>
-                          </div>
-                          <div className="h-1 w-full bg-line">
-                            <div
-                              className="bar-fill h-full bg-accent"
-                              style={{ width: `${Math.max(3, (g.hours / maxHours) * 100)}%` }}
-                            />
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </Reveal>
               </div>
             </div>
+
+            <Reveal>
+              <div className="mt-14 border border-line bg-background p-5 sm:p-6">
+                <p className="mb-1 font-mono text-[10px] tracking-[0.16em] text-muted">PLAYTIME OVERVIEW</p>
+                <p className="mb-6 text-sm text-soft">{site.about.games.note}</p>
+                <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
+                  {site.about.games.groups.map((group) => (
+                    <div key={group.name}>
+                      <p className="mb-3 font-mono text-[10px] tracking-[0.16em] text-accent">{group.name}</p>
+                      {group.items.length > 0 ? (
+                        <ul className="space-y-3">
+                          {group.items.map((game) => (
+                            <li key={game.name}>
+                              <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
+                                <span>
+                                  {game.name}
+                                  {game.tag ? (
+                                    <span className="ml-2 font-mono text-[10px] tracking-[0.08em] text-muted">
+                                      {game.tag}
+                                    </span>
+                                  ) : null}
+                                </span>
+                                <span className="font-mono text-xs text-soft">{game.hours.toLocaleString()}h</span>
+                              </div>
+                              <div className="h-1 w-full bg-line">
+                                <div
+                                  className="bar-fill h-full bg-accent"
+                                  style={{ width: `${Math.max(3, (game.hours / maxHours) * 100)}%` }}
+                                />
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      {group.more ? (
+                        <p className={`${group.items.length > 0 ? "mt-3" : ""} text-sm leading-7 text-soft`}>
+                          {group.more.join(" / ")}
+                        </p>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 

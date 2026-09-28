@@ -172,24 +172,92 @@ export const site = {
       },
     ],
     skills: [
-      { group: "空间与关卡设计", items: ["空间布局、动线规划与场景氛围营造", "UE5 关卡白盒搭建与布局"] },
+      { group: "空间与关卡设计", items: ["空间布局", "动线规划", "场景氛围营造", "UE5 关卡白盒搭建与布局"] },
       { group: "建模渲染", items: ["Rhino", "SketchUp", "AutoCAD", "Lumion", "D5", "Photoshop"] },
       { group: "协同办公", items: ["Office", "飞书", "Cursor"] },
     ],
     games: {
-      note: "全品类 15,000+ 小时，单机 ARPG 是主线：《只狼》《艾尔登法环》全成就，《黑神话：悟空》双结局。习惯从捷径、存档点与战斗场地拆立体箱庭。",
-      items: [
-        { name: "英雄联盟", hours: 4500, tag: "MOBA · 钻一" },
-        { name: "王者荣耀", hours: 3000, tag: "MOBA" },
-        { name: "原神", hours: 2000, tag: "开放世界 ARPG" },
-        { name: "明日方舟", hours: 2000, tag: "塔防 · 集成战略" },
-        { name: "古剑奇谭网络版", hours: 1000, tag: "MMORPG · 多个 Boss 首杀" },
-        { name: "PUBG", hours: 800, tag: "大逃杀" },
-        { name: "三角洲行动", hours: 600, tag: "FPS · 搜打撤" },
-        { name: "文明 6", hours: 500, tag: "TBS · 白板过神" },
-        { name: "只狼", hours: 150, tag: "ARPG · 全成就" },
-        { name: "艾尔登法环", hours: 130, tag: "ARPG · 全成就" },
-        { name: "黑神话：悟空", hours: 60, tag: "ARPG · 双结局" },
+      note: "全品类 15,000+ 小时。有时长的按简历标注；其余为版本毕业或深度体验。",
+      groups: [
+        {
+          name: "二次元手游",
+          items: [
+            { name: "明日方舟", hours: 2000, tag: "120 级" },
+            { name: "原神", hours: 2000, tag: "60 级" },
+            { name: "崩坏：星穹铁道", hours: 800, tag: "70 级" },
+            { name: "绝区零", hours: 500, tag: "60 级" },
+            { name: "终末地", hours: 350, tag: "60 级" },
+          ],
+          more: ["重返未来1999", "永远的七日之都", "尘白禁区", "猫之城", "雷索纳斯", "崩坏3", "少前：云图计划", "来自星尘"],
+        },
+        {
+          name: "MOBA",
+          items: [
+            { name: "英雄联盟", hours: 4500, tag: "钻一" },
+            { name: "王者荣耀", hours: 3000, tag: "三十余赛季" },
+          ],
+        },
+        {
+          name: "FPS / TPS",
+          items: [
+            { name: "PUBG", hours: 800 },
+            { name: "三角洲行动", hours: 600 },
+            { name: "守望先锋", hours: 500 },
+            { name: "无畏契约", hours: 300 },
+            { name: "绝地潜兵 2", hours: 100 },
+          ],
+          more: ["彩虹六号：围攻", "CF", "CS:GO"],
+        },
+        {
+          name: "MMORPG",
+          items: [
+            { name: "古剑奇谭网络版", hours: 1000, tag: "多个 Boss 首杀" },
+            { name: "诛仙世界", hours: 500, tag: "PVP 化圣 · PVE 第一梯队" },
+          ],
+          more: ["逆水寒手游"],
+        },
+        {
+          name: "ARPG / RPG",
+          items: [
+            { name: "只狼", hours: 150, tag: "全成就" },
+            { name: "艾尔登法环", hours: 130, tag: "全成就" },
+            { name: "遗迹 2", hours: 73 },
+            { name: "33号远征队", hours: 68, tag: "全成就" },
+            { name: "黑神话：悟空", hours: 60, tag: "双结局" },
+            { name: "赛博朋克 2077", hours: 55 },
+          ],
+          more: ["GTA 系列", "蝙蝠侠：阿卡姆骑士", "霍格沃兹之遗", "剑星", "空洞骑士", "艾希"],
+        },
+        {
+          name: "Roguelike",
+          items: [
+            { name: "杀戮尖塔 2", hours: 120, tag: "通关 N10" },
+            { name: "失落城堡 2", hours: 60, tag: "最高难度真结局" },
+            { name: "哥布林弹球", hours: 60 },
+            { name: "风暴怕死队", hours: 50 },
+          ],
+          more: ["明日方舟：集成战略（高难多结局）", "月圆之夜（最高难度）", "元气骑士", "死亡细胞"],
+        },
+        {
+          name: "策略",
+          items: [{ name: "文明 6", hours: 500, tag: "白板过神" }],
+          more: ["部落冲突", "皇室战争", "星际争霸 2"],
+        },
+        {
+          name: "生存",
+          items: [],
+          more: ["深海迷航系列（通关）", "我的世界", "幻兽帕鲁", "饥荒"],
+        },
+        {
+          name: "双人 / 多人",
+          items: [],
+          more: ["双人成行（通关）", "双影奇境（通关）", "泡姆泡姆", "人类一败涂地（通关）", "糖豆人", "大富翁 11"],
+        },
+        {
+          name: "解谜休闲",
+          items: [],
+          more: ["纪念碑谷系列", "造桥模拟器"],
+        },
       ],
     },
   },
