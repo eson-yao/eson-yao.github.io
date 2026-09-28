@@ -88,6 +88,7 @@ export default function Home() {
                       {site.name}
                       <span className="ml-2 font-normal text-muted">{site.role}</span>
                     </p>
+                    <p className="text-xs text-soft">{site.scope}</p>
                   </div>
                 </div>
                 <p className="hidden font-mono text-[10px] tracking-[0.12em] text-muted sm:block">{site.status}</p>
@@ -317,7 +318,7 @@ export default function Home() {
               </p>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">欢迎直接联系。</h2>
               <p className="mt-5 max-w-xl leading-8 text-soft">
-                正在寻找游戏关卡策划相关机会，{site.status}。想一起做项目，或对某个作品有问题，随时写信。
+                正在寻找关卡设计岗位：搭白模、跟地编和美术把关卡做到落地，再测试和调整。{site.status}。想聊《雪隐》的任何一段设计，随时写信。
               </p>
             </Reveal>
             <Reveal delay={120}>
