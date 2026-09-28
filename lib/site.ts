@@ -21,7 +21,7 @@ export const site = {
   scope: "关卡设计 · 制作跟进",
   status: "上海 · 随时到岗",
   email: "1485858833@qq.com",
-  phone: "+8618752682988",
+  phone: "+86 18752682988",
   phoneHref: "tel:+8618752682988",
   location: "上海",
   github: "https://github.com/eson-yao",
