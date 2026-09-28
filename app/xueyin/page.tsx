@@ -71,7 +71,7 @@ export default function XueyinPreview() {
           </figcaption>
         </figure>
 
-        <p className="mt-8 max-w-2xl leading-8 text-soft">{feature.summary}</p>
+        <p className="mt-8 max-w-2xl indent-[2em] text-justify leading-8 text-soft">{feature.summary}</p>
 
         {feature.video.file ? (
           <>

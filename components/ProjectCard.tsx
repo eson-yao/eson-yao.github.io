@@ -25,7 +25,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="font-mono text-[10px] tracking-[0.14em] text-muted">{project.period}</p>
         <h3 className="text-lg font-semibold leading-snug">{project.name}</h3>
         <p className="text-xs text-muted">{project.meta}</p>
-        <p className="flex-1 text-sm leading-7 text-soft">{project.description}</p>
+        <p className="flex-1 indent-[2em] text-justify text-sm leading-7 text-soft">{project.description}</p>
       </div>
     </article>
   );

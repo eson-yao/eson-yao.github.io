@@ -115,7 +115,7 @@ export default function Home() {
                     <span>{f.en}</span>
                   </p>
                   <h3 className="text-xl font-semibold">{f.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-soft">{f.text}</p>
+                  <p className="mt-3 indent-[2em] text-justify text-sm leading-7 text-soft">{f.text}</p>
                   <span className="mt-6 block h-px w-8 bg-line-strong transition-all duration-500 group-hover:w-full group-hover:bg-accent" />
                 </div>
               </Reveal>
@@ -166,7 +166,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <p className="leading-8 text-soft">{site.feature.summary}</p>
+                <p className="indent-[2em] text-justify leading-8 text-soft">{site.feature.summary}</p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <PdfLink
                     href={site.feature.video.preview}
@@ -189,7 +189,7 @@ export default function Home() {
                       <span className="font-mono text-sm text-accent">0{i + 1}</span>
                       <div>
                         <h3 className="font-semibold">{p.title}</h3>
-                        <p className="mt-2 text-sm leading-7 text-soft">{p.text}</p>
+                        <p className="mt-2 indent-[2em] text-justify text-sm leading-7 text-soft">{p.text}</p>
                       </div>
                     </li>
                   </Reveal>
@@ -208,6 +208,7 @@ export default function Home() {
                 en={site.space.en}
                 title={site.space.title}
                 lead={site.space.lead}
+                prose
                 right={
                   <PdfLink
                     href={site.space.pdf.href}
@@ -239,6 +240,7 @@ export default function Home() {
                 en={site.about.en}
                 title={site.about.title}
                 lead={site.about.lead}
+                prose
               />
             </Reveal>
 
@@ -317,7 +319,7 @@ export default function Home() {
                 <span className="text-accent">04</span> / CONTACT
               </p>
               <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">欢迎直接联系。</h2>
-              <p className="mt-5 max-w-xl leading-8 text-soft">
+              <p className="mt-5 max-w-xl indent-[2em] text-justify leading-8 text-soft">
                 正在寻找关卡设计岗位：搭白模、跟地编和美术把关卡做到落地，再测试和调整。{site.status}。想聊《雪隐》的任何一段设计，随时写信。
               </p>
             </Reveal>
