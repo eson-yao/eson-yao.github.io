@@ -36,17 +36,32 @@ export default function XueyinPreview() {
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{feature.title}</h1>
         <p className="mt-4 max-w-2xl leading-8 text-soft">{feature.subtitle}</p>
 
-        <figure className="mt-10 overflow-hidden border border-line-strong">
-          <Image
-            src={feature.image.src}
-            alt={feature.image.alt}
-            width={feature.image.width}
-            height={feature.image.height}
-            priority
-            className="block h-auto w-full"
-          />
+        <figure className="mt-10 overflow-hidden border border-line-strong bg-black">
+          {feature.video.file ? (
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={feature.image.src}
+              src={feature.video.file}
+              className="block aspect-video h-auto w-full"
+            >
+              视频无法播放时，请使用下方按钮下载 {feature.video.filename}。
+            </video>
+          ) : (
+            <Image
+              src={feature.image.src}
+              alt={feature.image.alt}
+              width={feature.image.width}
+              height={feature.image.height}
+              priority
+              className="block h-auto w-full"
+            />
+          )}
           <figcaption className="border-t border-line px-4 py-3 font-mono text-[10px] tracking-[0.12em] text-muted">
-            {feature.image.caption}
+            {feature.video.file
+              ? `实机预览 · 1080p · ${feature.video.length}`
+              : feature.image.caption}
           </figcaption>
         </figure>
 
@@ -54,20 +69,32 @@ export default function XueyinPreview() {
 
         {feature.video.file ? (
           <>
-            <a
-              href={feature.video.file}
-              className="group mt-8 inline-flex items-center gap-4 border border-accent bg-accent px-5 py-3 text-sm font-medium text-accent-ink hover:bg-accent-strong"
-            >
-              <span>打开视频</span>
-              <span className="font-mono text-[11px] tracking-[0.08em] text-accent-ink/70">
-                {feature.video.filename}
-                {feature.video.size ? ` · ${feature.video.size}` : ""}
-              </span>
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={feature.video.file}
+                download={feature.video.filename}
+                className="group inline-flex items-center gap-4 border border-accent bg-accent px-5 py-3 text-sm font-medium text-accent-ink hover:bg-accent-strong"
+              >
+                <span>下载视频文件</span>
+                <span className="font-mono text-[11px] tracking-[0.08em] text-accent-ink/70">
+                  {feature.video.filename}
+                  {feature.video.size ? ` · ${feature.video.size}` : ""}
+                </span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">↓</span>
+              </a>
+              <a
+                href={`/${feature.pdf.href}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 border border-line-strong px-5 py-3 text-sm font-medium text-foreground hover:border-accent"
+              >
+                <span>{feature.pdf.label}</span>
+                <span className="font-mono text-[11px] tracking-[0.08em] text-muted">{feature.pdf.pages}</span>
+              </a>
+            </div>
             <p className="mt-4 font-mono text-[11px] tracking-[0.08em] text-muted">
-              浏览器会直接打开这个文件并播放
-              {feature.video.size ? `。约 ${feature.video.size}，加载需要一点时间` : ""}。
+              在线播放会边加载边播；网络较慢时可先下载到本地观看
+              {feature.video.size ? `（约 ${feature.video.size}）` : ""}。
             </p>
           </>
         ) : (

@@ -175,8 +175,8 @@ export default function Home() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <PdfLink
                     href={site.feature.video.preview}
-                    label="关卡视频预览"
-                    pages={site.feature.video.file ? site.feature.video.filename : "即将上线"}
+                    label="观看关卡实机视频"
+                    pages={site.feature.video.file ? `1080p · ${site.feature.video.length}` : "即将上线"}
                     primary
                   />
                   <PdfLink

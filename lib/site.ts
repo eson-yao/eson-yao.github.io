@@ -99,9 +99,10 @@ export const site = {
     // file 留空表示视频尚未上传；填入 mp4 直链后按钮自动变为可点击
     video: {
       preview: "/xueyin/",
-      file: "",
+      file: "https://github.com/eson-yao/eson-yao.github.io/releases/download/video-v1/xueyin.mp4",
       filename: "雪隐.mp4",
-      size: "",
+      size: "649 MB",
+      length: "17:31",
     },
   },
 
