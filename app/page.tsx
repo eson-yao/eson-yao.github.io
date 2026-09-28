@@ -40,7 +40,7 @@ export default function Home() {
                 </h1>
               </Reveal>
               <Reveal delay={160}>
-                <p className="mt-8 max-w-xl border-l-2 border-accent pl-5 indent-[2em] text-base leading-8 text-soft sm:text-lg">
+                <p className="mt-8 max-w-xl border-l-2 border-accent pl-5 indent-[2em] text-justify text-base leading-8 text-soft sm:text-lg">
                   {site.lead}
                 </p>
               </Reveal>
