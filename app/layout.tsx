@@ -1,45 +1,40 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
-import { site } from "@/lib/site";
+import { Noto_Sans_SC, Syne } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const display = Syne({
   subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = Noto_Sans_SC({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: `${site.name}｜游戏关卡策划作品集`,
-  description: site.description,
+  title: "姚一心 · 游戏关卡策划",
+  description:
+    "姚一心的关卡策划作品集。UE5 灰盒 Demo《雪隐》与《“新律”》，以及风景园林空间与动线实践。",
   openGraph: {
-    title: `${site.name}｜游戏关卡策划作品集`,
-    description: site.description,
-    images: [site.feature.image.src],
-    locale: "zh_CN",
+    title: "姚一心 · 游戏关卡策划",
+    description: "UE5 灰盒关卡《雪隐》《“新律”》，以及空间设计作品。",
+    url: "https://eson-yao.github.io",
     type: "website",
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="zh-CN"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body className="min-h-full flex flex-col">
-        {/* 标记 JS 可用，滚动显现动画只在有 JS 时启用，无 JS 也能看到全部内容 */}
-        <Script id="js-flag" strategy="beforeInteractive">
-          {`document.documentElement.setAttribute("data-js","1")`}
-        </Script>
-        {children}
-      </body>
+    <html lang="zh-CN">
+      <body className={`${display.variable} ${body.variable}`}>{children}</body>
     </html>
   );
 }
