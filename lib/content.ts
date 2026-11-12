@@ -75,6 +75,9 @@ export const xueyin: FeaturedProject = {
   pdfHref: "/files/xueyin-level-design.pdf",
   pdfLabel: "阅读完整关卡设计介绍",
   pdfMeta: "18 页 PDF",
+  videoHref: "/xueyin/",
+  videoLabel: "观看关卡 Demo 视频",
+  videoMeta: "1080p · 17:31",
 };
 
 export const xinlv: FeaturedProject = {

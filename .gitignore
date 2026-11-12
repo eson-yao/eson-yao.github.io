@@ -7,3 +7,5 @@ out
 .vercel
 
 .preview/
+.cursor-title-check.png
+tmp-title-line.png
