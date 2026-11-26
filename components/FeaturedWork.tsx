@@ -3,11 +3,15 @@ import type { FeaturedProject } from "@/lib/content";
 
 export function FeaturedWork({ project }: { project: FeaturedProject }) {
   return (
-    <section className="section" id={project.id}>
+    <section
+      className={project.variant === "shipped" ? "section feature--shipped" : "section"}
+      id={project.id}
+    >
       <div className="section__head">
         <div>
           <p className="section__index">{project.index}</p>
           <h2>{project.title}</h2>
+          {project.kicker ? <p className="ship-kicker">{project.kicker}</p> : null}
         </div>
       </div>
 
