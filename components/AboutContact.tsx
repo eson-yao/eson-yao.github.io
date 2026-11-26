@@ -6,7 +6,7 @@ export function AboutContact() {
       <section className="section" id="about">
         <div className="section__head">
           <div>
-            <p className="section__index">06 / ABOUT</p>
+            <p className="section__index">07 / ABOUT</p>
             <h2>关于我</h2>
           </div>
         </div>
@@ -34,7 +34,7 @@ export function AboutContact() {
       <section className="section" id="contact">
         <div className="section__head">
           <div>
-            <p className="section__index">07 / CONTACT</p>
+            <p className="section__index">08 / CONTACT</p>
             <h2>联系与简历</h2>
           </div>
           <p className="section__lead">欢迎沟通关卡策划相关机会。</p>

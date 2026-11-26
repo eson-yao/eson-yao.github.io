@@ -18,9 +18,10 @@ export const navItems = [
   { id: "bangbang", label: "坦克", href: "#bangbang", index: "02" },
   { id: "work", label: "雪隐", href: "#work", index: "03" },
   { id: "xinlv", label: "“新律”", href: "#xinlv", index: "04" },
-  { id: "space", label: "空间", href: "#space", index: "05" },
-  { id: "about", label: "经历", href: "#about", index: "06" },
-  { id: "contact", label: "联系", href: "#contact", index: "07" },
+  { id: "play", label: "游戏", href: "#play", index: "05" },
+  { id: "space", label: "空间", href: "#space", index: "06" },
+  { id: "about", label: "经历", href: "#about", index: "07" },
+  { id: "contact", label: "联系", href: "#contact", index: "08" },
 ] as const;
 
 export type FeatureNote = {
@@ -159,6 +160,100 @@ export const xinlv: FeaturedProject = {
   videoLabel: "观看关卡 Demo 视频",
   videoMeta: "720p · 12:34",
 };
+
+export type PlayEntry = {
+  name: string;
+  /** 进度备注，如「60 级」「全成就」 */
+  note?: string;
+  /** 游玩小时数，用于柱状图长度；无小时数据时不画柱 */
+  hours?: number;
+  /** 展示在右侧的时长文案 */
+  label: string;
+};
+
+export type PlayCategory = {
+  title: string;
+  entries: PlayEntry[];
+  more?: string;
+};
+
+export const playCategories: PlayCategory[] = [
+  {
+    title: "二次元",
+    entries: [
+      { name: "《原神》", note: "60 级", hours: 2000, label: "2000h+" },
+      { name: "《明日方舟》", note: "120 级", hours: 2000, label: "2000h+" },
+      { name: "《崩坏：星穹铁道》", note: "70 级", hours: 800, label: "800h+" },
+      { name: "《明日方舟：终末地》", note: "60 级", hours: 500, label: "500h+" },
+      { name: "《绝区零》", note: "60 级", hours: 500, label: "500h+" },
+    ],
+    more: "另有《重返未来 1999》《永远的七日之都》《尘白禁区》《猫之城》《雷索纳斯》《崩坏 3》《少女前线：云图计划》《来自星尘》多款版本毕业或深度体验。",
+  },
+  {
+    title: "MOBA",
+    entries: [
+      { name: "《英雄联盟》", note: "钻石一", hours: 4500, label: "4500h+" },
+      { name: "《王者荣耀》", note: "S3 起三十余赛季", hours: 3000, label: "3000h+" },
+    ],
+  },
+  {
+    title: "FPS / TPS",
+    entries: [
+      { name: "《PUBG》", hours: 800, label: "800h+" },
+      { name: "《三角洲行动》", hours: 600, label: "600h+" },
+      { name: "《守望先锋》", hours: 500, label: "500h+" },
+      { name: "《无畏契约》", hours: 300, label: "300h+" },
+      { name: "《绝地潜兵 2》", hours: 100, label: "100h+" },
+    ],
+    more: "另有《彩虹六号：围攻》《CF》《CS:GO》长期游玩。",
+  },
+  {
+    title: "MMORPG",
+    entries: [
+      { name: "《古剑奇谭网络版》", note: "多个 Boss 首杀", hours: 1000, label: "1000h+" },
+      { name: "《诛仙世界》", note: "PVP 化圣 · PVE 第一梯队", hours: 500, label: "500h+" },
+    ],
+    more: "另有《燕云十六声》《逆水寒手游》。",
+  },
+  {
+    title: "ARPG / RPG",
+    entries: [
+      { name: "《只狼》", note: "全成就", hours: 150, label: "150h" },
+      { name: "《艾尔登法环》", note: "全成就", hours: 130, label: "130h" },
+      { name: "《遗迹 2》", hours: 73, label: "73h" },
+      { name: "《33 号远征队》", note: "全成就", hours: 68, label: "68h" },
+      { name: "《黑神话：悟空》", note: "双结局", hours: 60, label: "60h" },
+      { name: "《赛博朋克 2077》", hours: 55, label: "55h" },
+      { name: "《影之刃零》", note: "全成就", hours: 40, label: "40h" },
+    ],
+    more: "另有《GTA 系列》《蝙蝠侠：阿卡姆骑士》《霍格沃兹之遗》《剑星》《空洞骑士》《艾希》。",
+  },
+  {
+    title: "Roguelike",
+    entries: [
+      { name: "《杀戮尖塔 2》", note: "N10 通关", hours: 150, label: "150h+" },
+      { name: "《失落城堡 2》", note: "最高难度真结局", hours: 60, label: "60h+" },
+      { name: "《哥布林弹球》", hours: 60, label: "60h+" },
+      { name: "《风暴怕死队》", hours: 50, label: "50h+" },
+    ],
+    more: "另有《明日方舟：集成战略》《月圆之夜》《元气骑士》《死亡细胞》。",
+  },
+  {
+    title: "策略",
+    entries: [{ name: "《文明 6》", note: "白板过神", hours: 500, label: "500h+" }],
+    more: "另有《部落冲突》（18 本）《皇室战争》《星际争霸 2》。",
+  },
+  {
+    title: "其他",
+    entries: [
+      { name: "《深海迷航》系列", label: "已有内容通关" },
+      { name: "《双人成行》", label: "通关" },
+      { name: "《双影奇境》", label: "通关" },
+      { name: "《人类一败涂地》", label: "往期版本通关" },
+    ],
+    more: "另有《我的世界》《幻兽帕鲁》《饥荒》《泡姆泡姆》《糖豆人》《大富翁 11》《纪念碑谷》系列、《造桥模拟器》。",
+  },
+];
 
 export const landscapeProjects = [
   {

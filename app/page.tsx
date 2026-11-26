@@ -1,5 +1,6 @@
 import { AboutContact } from "@/components/AboutContact";
 import { FeaturedWork } from "@/components/FeaturedWork";
+import { GameExperience } from "@/components/GameExperience";
 import { Hero } from "@/components/Hero";
 import { SideNav } from "@/components/SideNav";
 import { SpaceProjects } from "@/components/SpaceProjects";
@@ -16,6 +17,7 @@ export default function HomePage() {
         <FeaturedWork project={bangbang} />
         <FeaturedWork project={xueyin} />
         <FeaturedWork project={xinlv} />
+        <GameExperience />
         <SpaceProjects />
         <AboutContact />
         <footer className="site-footer">

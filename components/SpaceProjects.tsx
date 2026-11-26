@@ -6,7 +6,7 @@ export function SpaceProjects() {
     <section className="section" id="space">
       <div className="section__head">
         <div>
-          <p className="section__index">05 / SPACE</p>
+          <p className="section__index">06 / SPACE</p>
           <h2>空间设计基础</h2>
         </div>
         <p className="section__lead">
