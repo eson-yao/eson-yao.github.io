@@ -6,17 +6,21 @@ export const profile = {
   phone: "187 5268 2988",
   phoneHref: "tel:+8618752682988",
   email: "1485858833@qq.com",
-  lead:
-    "风景园林硕士。我把空间规划、人流引导和场景叙事用到关卡里，目前用 Unreal Engine 5 做灰盒关卡。代表作是第三人称 ARPG 线性箱庭 Demo《雪隐》，以及以循环为母题的箱庭 Demo《“新律”》。",
+  lead: [
+    "热爱游戏，长期沉浸式体验多品类游戏，关注市场趋势、玩法演进与玩家反馈。善于从玩家视角捕捉操作手感、空间感知与关卡节奏偏好，具备良好的玩家共情与洞察能力，熟悉新手引导、难度分层与心流控制逻辑，能够挖掘不同类型玩家在关卡中的卡点与爽点，分析并提出优化方案，提升关卡的可读性与游玩体验。",
+    "具备关卡从设计到落地的完整能力，曾参与Steam独立游戏与个人关卡Demo的开发工作，涉及主题设定、箱庭结构搭建、机制递进编排、动线引导与版本迭代等内容，擅长结合玩家反馈识别关卡问题，制定优化方案并跟进落地。熟练使用Unreal Engine进行关卡白盒搭建、蓝图逻辑实现与关卡配置，具备机制拆解、数值推演与体验复盘能力，逻辑清晰、执行力强，细心负责。",
+    "擅长玩法创意包装与机制表达，熟练运用 AI 工具辅助设计灵感发散、内容创作与方案论证，能够把设计想法快速转换为可在引擎中运行的原型，提升关卡设计落地效率。",
+  ],
 };
 
 export const navItems = [
   { id: "index", label: "定位", href: "#index", index: "01" },
-  { id: "work", label: "雪隐", href: "#work", index: "02" },
-  { id: "xinlv", label: "“新律”", href: "#xinlv", index: "03" },
-  { id: "space", label: "空间", href: "#space", index: "04" },
-  { id: "about", label: "经历", href: "#about", index: "05" },
-  { id: "contact", label: "联系", href: "#contact", index: "06" },
+  { id: "bangbang", label: "坦克", href: "#bangbang", index: "02" },
+  { id: "work", label: "雪隐", href: "#work", index: "03" },
+  { id: "xinlv", label: "“新律”", href: "#xinlv", index: "04" },
+  { id: "space", label: "空间", href: "#space", index: "05" },
+  { id: "about", label: "经历", href: "#about", index: "06" },
+  { id: "contact", label: "联系", href: "#contact", index: "07" },
 ] as const;
 
 export type FeatureNote = {
@@ -30,6 +34,7 @@ export type FeaturedProject = {
   title: string;
   tags: string[];
   summary: string;
+  notesHeading?: string;
   notes: FeatureNote[];
   cover: {
     src: string;
@@ -43,11 +48,51 @@ export type FeaturedProject = {
   videoHref?: string;
   videoLabel?: string;
   videoMeta?: string;
+  variant?: "demo" | "shipped";
+  kicker?: string;
+};
+
+export const bangbang: FeaturedProject = {
+  id: "bangbang",
+  index: "02 / SHIPPED",
+  title: "《棒棒坦克》",
+  variant: "shipped",
+  kicker: "商业项目 · Steam 已上线",
+  tags: ["LiFou Games", "已上线", "物理肉鸽", "俯视", "阵型", "单局约 30 分钟"],
+  summary:
+    "《棒棒坦克》是以上架Steam的独立游戏，玩家指挥坦克部队对抗“邪恶洋葱头”的入侵军：玩家控制车队走位，坦克自动开火。玩家可以在每一轮结束后通关商店购买坦克及藏品，结合坦克升级、反物质增益等内容，形成自己的阵容和藏品构筑，最终击败boss。",
+  notesHeading: "工作内容",
+  notes: [
+    {
+      title: "地图空间与地形机制",
+      body: "基于田字格结构的单张战场——在四角分别布置荒地、沙漠、科技、未来四种元素地形，各带伸缩掩体与地形机制；玩家可利用角落躲避弹幕或借地形辅助击杀，但限制自身移动与逃跑空间。",
+    },
+    {
+      title: "地形Buff与构筑联动",
+      body: "安排藏品中地形交互陷阱的空间位置，让玩家根据自身Build自主选择改变关卡地形与打法。",
+    },
+    {
+      title: "关卡波次与节奏编排",
+      body: "设计“分批战斗 + 阶段Boss”结构，设计每波敌人出怪量和种类内容，确保难度曲线合理，实现长线体验可玩性。",
+    },
+  ],
+  cover: {
+    src: "/images/bangbang/cover.jpg",
+    alt: "《棒棒坦克》战场与坦克阵型",
+    caption: "实机画面 / Steam",
+    ratio: "16 / 9",
+  },
+  pdfHref: "https://store.steampowered.com/app/3987640/%E6%A3%92%E6%A3%92%E5%9D%A6%E5%85%8B/",
+  pdfLabel: "打开 Steam 商店页",
+  pdfMeta: "已上线",
+  videoHref: "https://www.bilibili.com/video/BV14k9kBAEkx/",
+  videoLabel: "观看上线视频",
+  videoMeta: "哔哩哔哩",
 };
 
 export const xueyin: FeaturedProject = {
   id: "work",
-  index: "02 / WORK",
+  index: "03 / WORK",
   title: "《雪隐》",
   tags: ["Unreal Engine 5", "白模", "ARPG", "线性箱庭", "第三人称", "约 20 分钟", "关卡事件"],
   summary:
@@ -82,7 +127,7 @@ export const xueyin: FeaturedProject = {
 
 export const xinlv: FeaturedProject = {
   id: "xinlv",
-  index: "03 / WORK",
+  index: "04 / WORK",
   title: "《“新律”》",
   tags: ["Unreal Engine 5", "灰盒", "箱庭", "循环解谜", "第三人称", "约 10–15 分钟"],
   summary:

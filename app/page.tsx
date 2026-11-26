@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { SideNav } from "@/components/SideNav";
 import { SpaceProjects } from "@/components/SpaceProjects";
 import { TopBar } from "@/components/TopBar";
-import { profile, xinlv, xueyin } from "@/lib/content";
+import { bangbang, profile, xinlv, xueyin } from "@/lib/content";
 
 export default function HomePage() {
   return (
@@ -13,6 +13,7 @@ export default function HomePage() {
       <TopBar />
       <main className="main">
         <Hero />
+        <FeaturedWork project={bangbang} />
         <FeaturedWork project={xueyin} />
         <FeaturedWork project={xinlv} />
         <SpaceProjects />

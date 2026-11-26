@@ -3,11 +3,15 @@ import type { FeaturedProject } from "@/lib/content";
 
 export function FeaturedWork({ project }: { project: FeaturedProject }) {
   return (
-    <section className="section" id={project.id}>
+    <section
+      className={project.variant === "shipped" ? "section feature--shipped" : "section"}
+      id={project.id}
+    >
       <div className="section__head">
         <div>
           <p className="section__index">{project.index}</p>
           <h2>{project.title}</h2>
+          {project.kicker ? <p className="ship-kicker">{project.kicker}</p> : null}
         </div>
       </div>
 
@@ -49,17 +53,22 @@ export function FeaturedWork({ project }: { project: FeaturedProject }) {
           </div>
         </div>
 
-        <ol className="feature__notes">
-          {project.notes.map((note, index) => (
-            <li key={note.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{note.title}</h3>
-                <p>{note.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="feature__aside">
+          {project.notesHeading ? (
+            <p className="feature__notes-label">{project.notesHeading}</p>
+          ) : null}
+          <ol className="feature__notes">
+            {project.notes.map((note, index) => (
+              <li key={note.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{note.title}</h3>
+                  <p>{note.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

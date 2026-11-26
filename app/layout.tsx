@@ -18,10 +18,10 @@ const body = Noto_Sans_SC({
 export const metadata: Metadata = {
   title: "姚一心 · 游戏关卡策划",
   description:
-    "姚一心的关卡策划作品集。UE5 灰盒 Demo《雪隐》与《“新律”》，以及风景园林空间与动线实践。",
+    "姚一心的关卡策划作品集。已上线物理肉鸽《棒棒坦克》，以及 UE5 箱庭 Demo《雪隐》与《“新律”》。",
   openGraph: {
     title: "姚一心 · 游戏关卡策划",
-    description: "UE5 灰盒关卡《雪隐》《“新律”》，以及空间设计作品。",
+    description: "已上线作品《棒棒坦克》，以及 UE5 箱庭 Demo《雪隐》《“新律”》。",
     url: "https://eson-yao.github.io",
     type: "website",
   },
