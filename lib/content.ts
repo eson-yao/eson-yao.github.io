@@ -7,16 +7,17 @@ export const profile = {
   phoneHref: "tel:+8618752682988",
   email: "1485858833@qq.com",
   lead:
-    "风景园林硕士。我把空间规划、人流引导和场景叙事用到关卡里，目前用 Unreal Engine 5 做灰盒关卡。代表作是第三人称 ARPG 线性箱庭 Demo《雪隐》，以及以循环为母题的箱庭 Demo《“新律”》。",
+    "个人优势是把空间用清楚。我熟悉空间布局、动线规划和场景氛围营造，能用环境设计引导玩家的行为与体验节奏，也能按规格完成关卡白盒。风景园林训练里的空间规划、人流分析和环境心理，是这些能力的来处。商业项目是已上线的物理肉鸽《棒棒坦克》；个人作品是 UE5 箱庭 Demo《雪隐》和《“新律”》。",
 };
 
 export const navItems = [
   { id: "index", label: "定位", href: "#index", index: "01" },
-  { id: "work", label: "雪隐", href: "#work", index: "02" },
-  { id: "xinlv", label: "“新律”", href: "#xinlv", index: "03" },
-  { id: "space", label: "空间", href: "#space", index: "04" },
-  { id: "about", label: "经历", href: "#about", index: "05" },
-  { id: "contact", label: "联系", href: "#contact", index: "06" },
+  { id: "bangbang", label: "坦克", href: "#bangbang", index: "02" },
+  { id: "work", label: "雪隐", href: "#work", index: "03" },
+  { id: "xinlv", label: "“新律”", href: "#xinlv", index: "04" },
+  { id: "space", label: "空间", href: "#space", index: "05" },
+  { id: "about", label: "经历", href: "#about", index: "06" },
+  { id: "contact", label: "联系", href: "#contact", index: "07" },
 ] as const;
 
 export type FeatureNote = {
@@ -43,11 +44,50 @@ export type FeaturedProject = {
   videoHref?: string;
   videoLabel?: string;
   videoMeta?: string;
+  variant?: "demo" | "shipped";
+  kicker?: string;
+};
+
+export const bangbang: FeaturedProject = {
+  id: "bangbang",
+  index: "02 / SHIPPED",
+  title: "《棒棒坦克》",
+  variant: "shipped",
+  kicker: "商业项目 · Steam 已上线",
+  tags: ["LiFou Games", "已上线", "物理肉鸽", "俯视", "阵型", "单局约 30 分钟"],
+  summary:
+    "《棒棒坦克》是 LiFou Games 于 2026 年 4 月 28 日在 Steam 上线的物理肉鸽。玩家指挥坦克部队对抗“邪恶洋葱头”的入侵军：人只负责走位，坦克自动开火，一场战斗大约 30 分钟，中途退出也会自动存档。和后面两份个人箱庭 Demo 不同，这是已经发行的商业产品，重点不在单线教学关，而在阵型、构筑和物理战场怎么一起成立。",
+  notes: [
+    {
+      title: "阵型就是空间",
+      body: "最多可以同时指挥 25 辆坦克，站位本身决定火力覆盖、承伤和走位。布局经常比单次操作更先决定胜负，战场要让阵型差异一眼能读出来。",
+    },
+    {
+      title: "短局里的构筑节奏",
+      body: "驾驶员各有特长和短板，装备、科技、战略和反物质都要在大约 30 分钟的单局里叠出可读的强度，而不是把所有系统一次倒给玩家。",
+    },
+    {
+      title: "物理战场仍要能走位",
+      body: "坦克自动攻击，玩家主要控制移动。碰撞、弹道和 Boss 场地得让躲开、卡位、用科技拦截火力这些选择仍然发生在一张看得懂的战场上。",
+    },
+  ],
+  cover: {
+    src: "/images/bangbang/cover.jpg",
+    alt: "《棒棒坦克》战场与坦克阵型",
+    caption: "实机画面 / Steam",
+    ratio: "16 / 9",
+  },
+  pdfHref: "https://store.steampowered.com/app/3987640/%E6%A3%92%E6%A3%92%E5%9D%A6%E5%85%8B/",
+  pdfLabel: "打开 Steam 商店页",
+  pdfMeta: "已上线",
+  videoHref: "https://www.bilibili.com/video/BV14k9kBAEkx/",
+  videoLabel: "观看上线视频",
+  videoMeta: "哔哩哔哩",
 };
 
 export const xueyin: FeaturedProject = {
   id: "work",
-  index: "02 / WORK",
+  index: "03 / WORK",
   title: "《雪隐》",
   tags: ["Unreal Engine 5", "白模", "ARPG", "线性箱庭", "第三人称", "约 20 分钟", "关卡事件"],
   summary:
@@ -82,7 +122,7 @@ export const xueyin: FeaturedProject = {
 
 export const xinlv: FeaturedProject = {
   id: "xinlv",
-  index: "03 / WORK",
+  index: "04 / WORK",
   title: "《“新律”》",
   tags: ["Unreal Engine 5", "灰盒", "箱庭", "循环解谜", "第三人称", "约 10–15 分钟"],
   summary:

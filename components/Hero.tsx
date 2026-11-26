@@ -22,6 +22,9 @@ export function Hero() {
         </p>
         <p className="hero__lead">{profile.lead}</p>
         <div className="hero__actions">
+          <a className="btn btn--shipped" href="#bangbang">
+            查看《棒棒坦克》
+          </a>
           <a className="btn btn--primary" href="#work">
             查看《雪隐》
           </a>
